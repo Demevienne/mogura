@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3E2FBBF71BD9BF42009289FF"
-               BuildableName = "mogura.app"
-               BlueprintName = "mogura"
-               ReferencedContainer = "container:mogura.xcodeproj">
+               BuildableName = "torupa.app"
+               BlueprintName = "torupa"
+               ReferencedContainer = "container:torupa.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3E2FBBF71BD9BF42009289FF"
-            BuildableName = "mogura.app"
-            BlueprintName = "mogura"
-            ReferencedContainer = "container:mogura.xcodeproj">
+            BuildableName = "torupa.app"
+            BlueprintName = "torupa"
+            ReferencedContainer = "container:torupa.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3E2FBBF71BD9BF42009289FF"
-            BuildableName = "mogura.app"
-            BlueprintName = "mogura"
-            ReferencedContainer = "container:mogura.xcodeproj">
+            BuildableName = "torupa.app"
+            BlueprintName = "torupa"
+            ReferencedContainer = "container:torupa.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3E2FBBF71BD9BF42009289FF"
-            BuildableName = "mogura.app"
-            BlueprintName = "mogura"
-            ReferencedContainer = "container:mogura.xcodeproj">
+            BuildableName = "torupa.app"
+            BlueprintName = "torupa"
+            ReferencedContainer = "container:torupa.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -1,14 +1,15 @@
 //
-//  ViewController.swift
+//  StartViewController.swift
 //  mogura
 //
-//  Copyright Yukio Denevienne Ueda
+//  Created by 上田 志雄 on 2016/01/16.
+//  Copyright © 2016年 shoeisha. All rights reserved.
 //
 
-import UIKit
 import SpriteKit
+import UIKit
 
-class ViewController: UIViewController {
+class StartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +24,8 @@ class ViewController: UIViewController {
         skView.showsNodeCount = true
         
         
-        // SKGameScene を生成する　(iPhone6s を前提とするサイズ)
-        let scene = TitleScene(size:CGSize(width: 375, height: 667))
+        // SKGameScene を生成する　(iPhone6 を前提とするサイズ)
+        let scene = GameScene(size:CGSize(width: 375, height: 667))
         
         // SKView と SKScene の size が異なる場合は AspectFit (アスペクト比を保ったまま全てを表示する。場合によっては隙間ができる)
         scene.scaleMode = SKSceneScaleMode.AspectFit

@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  mogura
 //
-//  Copyright © 2015年 shoeisha. All rights reserved.
+//  Copyright Yukio Denevienne ueda
 //
 
 import UIKit

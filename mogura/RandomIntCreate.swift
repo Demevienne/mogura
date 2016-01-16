@@ -3,7 +3,7 @@
 //  mogura
 //
 //  Created by 上田 志雄 on 2016/01/11.
-//  Copyright © 2016年 shoeisha. All rights reserved.
+//  Copyright Yukio Denevienn Ueda
 //
 
 import Foundation

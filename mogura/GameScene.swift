@@ -3,7 +3,7 @@
 //  mogura
 //
 //  Created by 上田 志雄 on 2016/01/10.
-//  Copyright © 2016年 shoeisha. All rights reserved.
+//  Copyright Yukio Denevienne Ueda
 //
 
 import SpriteKit
@@ -26,6 +26,11 @@ class GameScene: SKScene {
     var countLabel: SKLabelNode?
     var timer = NSTimer()
     
+    // 効果音用
+    var seAction: SKAction?
+    
+    // 乱数用
+    var maxvalue: Double = 5.0
   
     // シーンが表示された時に呼ばれる
     override func didMoveToView(view: SKView) {
@@ -40,7 +45,7 @@ class GameScene: SKScene {
         hole1.position = CGPoint(x: 100, y: 200)
         addChild(hole1)
         
-        moguras.append(SKSpriteNode(imageNamed: "mogura"))
+        moguras.append(SKSpriteNode(imageNamed: "torupa"))
         moguras[0].position = moguraPosition[0]
         
         addChild(moguras[0])
@@ -54,7 +59,7 @@ class GameScene: SKScene {
         hole2.position = CGPoint(x: 275, y: 200)
         addChild(hole2)
         
-        moguras.append(SKSpriteNode(imageNamed: "mogura"))
+        moguras.append(SKSpriteNode(imageNamed: "torupa"))
         moguras[1].position = moguraPosition[1]
         addChild(moguras[1])
         
@@ -67,7 +72,7 @@ class GameScene: SKScene {
         hole3.position = CGPoint(x: 100, y: 50)
         addChild(hole3)
         
-        moguras.append(SKSpriteNode(imageNamed: "mogura"))
+        moguras.append(SKSpriteNode(imageNamed: "torupa"))
         moguras[2].position = moguraPosition[2]
         addChild(moguras[2])
         
@@ -80,7 +85,7 @@ class GameScene: SKScene {
         hole4.position = CGPoint(x: 275, y: 50)
         addChild(hole4)
         
-        moguras.append(SKSpriteNode(imageNamed: "mogura"))
+        moguras.append(SKSpriteNode(imageNamed: "torupa"))
         moguras[3].position = moguraPosition[3]
         addChild(moguras[3])
         
@@ -106,6 +111,10 @@ class GameScene: SKScene {
         addChild(countLabel)
         self.countLabel = countLabel
         
+        // 効果音
+        let seAction = SKAction.playSoundFileNamed("se.mp3", waitForCompletion: false)
+        self.seAction = seAction
+        
         reset()
     }
 
@@ -114,7 +123,7 @@ class GameScene: SKScene {
     func moguraAction(sprite: SKSpriteNode) {
         
         // 乱数用
-        let ret: Double = CreateRandomInt.minMaxDesignation(min: 1, max: 5) / 10
+        let ret: Double = CreateRandomInt.minMaxDesignation(min: 1, max: maxvalue) / 10
         
         // 0.5秒 〜 2.5秒　待機する
         let action1 = SKAction.waitForDuration(0.5, withRange: 2.0)
@@ -168,7 +177,7 @@ class GameScene: SKScene {
         sprite.hidden = true
         
         // 書いてしながら飛ばされる
-        let hitMogura = SKSpriteNode(imageNamed: "mogura_hit")
+        let hitMogura = SKSpriteNode(imageNamed: "hit_torupa")
         hitMogura.position = sprite.position
         
         let action1 = SKAction.rotateByAngle(CGFloat(M_PI) * 2, duration: 1)
@@ -179,6 +188,9 @@ class GameScene: SKScene {
         let sequence = SKAction.sequence([action123, action4])
         
         addChild(hitMogura)
+        
+        // 効果音を鳴らす
+        runAction(seAction!)
         
         hitMogura.runAction(sequence, completion: {
             [unowned self] in
@@ -209,12 +221,52 @@ class GameScene: SKScene {
                 moguras[index].position = moguraPosition[index]
                 moguraAction(moguras[index])
             }
+            
+            let start = SKSpriteNode(imageNamed: "start")
+            start.position = CGPoint(x: self.size.width * 0.5, y: self.size.height * 0.7)
+            
+            // スタートを表示する
+            let action1 = SKAction.waitForDuration(1.0)
+            let action2 = SKAction.fadeOutWithDuration(1.0)
+            let action3 = SKAction.removeFromParent()
+            let sequence = SKAction.sequence([action1, action2, action3])
+            
+            addChild(start)
+            start.runAction(sequence)
         }
         
         // タイマーが発火した時に呼ばれる
         func timerUpdate() {
             timeCount--
-            countLabel?.text = "TIME: \(timeCount)"
+            
+            if timeCount >= 0 {
+                countLabel?.text = "TIME: \(timeCount)"
+            } else {
+                
+                // タイマーを停止する
+                timer.invalidate()
+                
+                let gameOverLabel = SKSpriteNode(imageNamed: "gameover")
+                gameOverLabel.position = CGPoint(x: self.size.width * 0.5, y: 480)
+                
+                addChild(gameOverLabel)
+                
+                let action1 = SKAction.waitForDuration(1)
+                let action2 = SKAction.fadeOutWithDuration(0.5)
+                let action3 = SKAction.removeFromParent()
+                let sequence = SKAction.sequence([action1, action2, action3])
+                
+                gameOverLabel.runAction(sequence, completion: {
+                    [unowned self] in
+                    
+                    //ゲームオーバー画面に遷移する
+                    let gameOverScene = GameOverScene(size: self.size)
+                    gameOverScene.score = self.score
+                    let skView = self.view as SKView!
+                    gameOverScene.scaleMode = SKSceneScaleMode.AspectFit
+                    skView.presentScene(gameOverScene)
+                    })
+            }
         }
         
 }

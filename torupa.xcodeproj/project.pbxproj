@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1062FED31C4296D800B56079 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062FED21C4296D800B56079 /* GameScene.swift */; };
 		1062FED51C42BC0E00B56079 /* RandomIntCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062FED41C42BC0E00B56079 /* RandomIntCreate.swift */; };
+		10A2D7371C4A4F2D00DCD8AD /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A2D7361C4A4F2D00DCD8AD /* GameOverScene.swift */; };
+		10F6E2341C4A8B07008098DA /* TitleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F6E2331C4A8B07008098DA /* TitleScene.swift */; };
 		3E2FBBFC1BD9BF42009289FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2FBBFB1BD9BF42009289FF /* AppDelegate.swift */; };
 		3E2FBBFE1BD9BF42009289FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2FBBFD1BD9BF42009289FF /* ViewController.swift */; };
 		3E2FBC011BD9BF42009289FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E2FBBFF1BD9BF42009289FF /* Main.storyboard */; };
@@ -20,7 +22,9 @@
 /* Begin PBXFileReference section */
 		1062FED21C4296D800B56079 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		1062FED41C42BC0E00B56079 /* RandomIntCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomIntCreate.swift; sourceTree = "<group>"; };
-		3E2FBBF81BD9BF42009289FF /* mogura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mogura.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		10A2D7361C4A4F2D00DCD8AD /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		10F6E2331C4A8B07008098DA /* TitleScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleScene.swift; sourceTree = "<group>"; };
+		3E2FBBF81BD9BF42009289FF /* torupa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = torupa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E2FBBFB1BD9BF42009289FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E2FBBFD1BD9BF42009289FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3E2FBC001BD9BF42009289FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,7 +56,7 @@
 		3E2FBBF91BD9BF42009289FF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3E2FBBF81BD9BF42009289FF /* mogura.app */,
+				3E2FBBF81BD9BF42009289FF /* torupa.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,7 +72,9 @@
 				3E2FBC041BD9BF42009289FF /* LaunchScreen.storyboard */,
 				3E2FBC071BD9BF42009289FF /* Info.plist */,
 				1062FED21C4296D800B56079 /* GameScene.swift */,
+				10A2D7361C4A4F2D00DCD8AD /* GameOverScene.swift */,
 				1062FED41C42BC0E00B56079 /* RandomIntCreate.swift */,
+				10F6E2331C4A8B07008098DA /* TitleScene.swift */,
 			);
 			path = mogura;
 			sourceTree = "<group>";
@@ -76,9 +82,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3E2FBBF71BD9BF42009289FF /* mogura */ = {
+		3E2FBBF71BD9BF42009289FF /* torupa */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3E2FBC0A1BD9BF42009289FF /* Build configuration list for PBXNativeTarget "mogura" */;
+			buildConfigurationList = 3E2FBC0A1BD9BF42009289FF /* Build configuration list for PBXNativeTarget "torupa" */;
 			buildPhases = (
 				3E2FBBF41BD9BF42009289FF /* Sources */,
 				3E2FBBF51BD9BF42009289FF /* Frameworks */,
@@ -88,9 +94,9 @@
 			);
 			dependencies = (
 			);
-			name = mogura;
+			name = torupa;
 			productName = mogura;
-			productReference = 3E2FBBF81BD9BF42009289FF /* mogura.app */;
+			productReference = 3E2FBBF81BD9BF42009289FF /* torupa.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -101,14 +107,14 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0710;
-				ORGANIZATIONNAME = shoeisha;
+				ORGANIZATIONNAME = denevienne;
 				TargetAttributes = {
 					3E2FBBF71BD9BF42009289FF = {
 						CreatedOnToolsVersion = 7.1;
 					};
 				};
 			};
-			buildConfigurationList = 3E2FBBF31BD9BF42009289FF /* Build configuration list for PBXProject "mogura" */;
+			buildConfigurationList = 3E2FBBF31BD9BF42009289FF /* Build configuration list for PBXProject "torupa" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -121,7 +127,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3E2FBBF71BD9BF42009289FF /* mogura */,
+				3E2FBBF71BD9BF42009289FF /* torupa */,
 			);
 		};
 /* End PBXProject section */
@@ -145,10 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10A2D7371C4A4F2D00DCD8AD /* GameOverScene.swift in Sources */,
 				1062FED51C42BC0E00B56079 /* RandomIntCreate.swift in Sources */,
 				1062FED31C4296D800B56079 /* GameScene.swift in Sources */,
 				3E2FBBFE1BD9BF42009289FF /* ViewController.swift in Sources */,
 				3E2FBBFC1BD9BF42009289FF /* AppDelegate.swift in Sources */,
+				10F6E2341C4A8B07008098DA /* TitleScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,8 +269,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = mogura/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jp.co.shoeisha.swiftbook.mogura;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.denevienne.mogura;
+				PRODUCT_NAME = torupa;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -272,15 +281,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = mogura/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jp.co.shoeisha.swiftbook.mogura;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.denevienne.mogura;
+				PRODUCT_NAME = torupa;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3E2FBBF31BD9BF42009289FF /* Build configuration list for PBXProject "mogura" */ = {
+		3E2FBBF31BD9BF42009289FF /* Build configuration list for PBXProject "torupa" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3E2FBC081BD9BF42009289FF /* Debug */,
@@ -289,7 +299,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3E2FBC0A1BD9BF42009289FF /* Build configuration list for PBXNativeTarget "mogura" */ = {
+		3E2FBC0A1BD9BF42009289FF /* Build configuration list for PBXNativeTarget "torupa" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3E2FBC0B1BD9BF42009289FF /* Debug */,
